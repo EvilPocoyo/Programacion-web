@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Agregar estudiante</h1>
+    <!-- Action es una ruta que se va a ejecutar cuando se haga submit -->
+    <form action="/addStudent" method="POST">
+        <label for="nss">NSS</label>
+        <!-- Los "id" son para identificar al elemento de manera unica -->
+        <!-- Los "name" son para especificar el nombre del elemento del form -->
+        <!-- los "type" especifica el tipo de entrada de datos (en este caso, text)-->
+        <input type="text" id="nss" name="nss"><br><br>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre"> <br><br>
+        <label for="edad">Edad</label>
+        <input type="text" id="edad" name="edad"><br><br>
+        <label for="tipoSangre">Tipo de sangre:</label>
+        <input type="text" id="tipoSangre" name="tipoSangre"><br><br>
+
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
