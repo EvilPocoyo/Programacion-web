@@ -1,0 +1,30 @@
+<table>
+    <thead>
+        <tr>
+            <th>NSS</th>
+            <th>Nombre</th>
+            <th>Tipo de Sangre</th>
+            <th>Edad</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for (let i=0; i < Persons.length; i++) { %>
+            <tr>
+                <td>
+                    <%= Persons[i].nss %>
+                </td>
+                <td>
+                    <%= Persons[i].nombre %>
+                </td>
+                <td>
+                    <%= Persons[i].edad %>
+                </td>
+                <td>
+                    <%= Persons[i].tipoSangre %>
+                </td>
+            </tr>
+            <% } %>
+    </tbody>
+</table>
