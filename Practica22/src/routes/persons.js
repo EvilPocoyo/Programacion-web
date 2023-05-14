@@ -19,11 +19,11 @@ router.get('/findById/:id', (req, res) => { // Creamos una ruta para actualizar 
 });
 
 router.get('/deletePerson/:id', async (req, res) => { // Creamos una ruta para eliminar a una persona
-    try {
-        const deletedPerson = await Person.findByIdAndDelete(req.params.id);
-        res.redirect('/gente');
-    } catch (error) {
-        res.json({ message: error });
+    try { // Intentamos eliminar a la persona
+        const deletedPerson = await Person.findByIdAndDelete(req.params.id); // Buscamos a la persona por su id y la eliminamos
+        res.redirect('/gente'); // Redireccionamos a la ruta de obtener a la gente
+    } catch (error) { // Si hay un error
+        res.json({ message: error }); // Regresamos el error
     }
 });
 
