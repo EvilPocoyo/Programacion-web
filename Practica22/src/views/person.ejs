@@ -1,0 +1,21 @@
+<table class="styled-table">
+    <tr>
+        <th>Nss</th>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Tipo de sangre</th>
+        <th></th>
+    </tr>
+    <% Object.keys(Persons).forEach(function(prop) { %>
+        <tr>
+            <td><%- Persons[prop].nss %></td>
+            <td><%- Persons[prop].nombre %></td>
+            <td><%- Persons[prop].edad %></td>
+            <td><%- Persons[prop].tipoSangre %></td>
+            <td><a href="<%= `deletePerson/${Persons[prop]._id}` %>" onclick="return confirm('¿Está seguro que desea eliminar este documento?')">Delete</a></td>
+            <td><a href="<%= `findById/${Persons[prop]._id}`%>">Update</a></td>
+        </tr>
+    <% }); %>
+
+</table>
+<div class="add-btn-container"> <a href= "./addPerson">Agregar</a></div>
